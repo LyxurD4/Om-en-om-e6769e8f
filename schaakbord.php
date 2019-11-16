@@ -30,40 +30,31 @@
 </head>
 <body>
     <h1>Schaakbord</h1>
-    <br>    
-    <?php
-        for($i= 1; $i <= 4 ; $i++) {
-            echo 
-            "<table>
-                <tbody>
+    <br>
+    <table>
+        <tbody>
+            <?php for($i = 0; $i <= 8 ; $i++) { ?>
                     <tr>
-                        <td class = black></td>
-                        <td class = white></td>
-                        <td class = black></td>
-                        <td class = white></td>
-                        <td class = black></td>
-                        <td class = white></td>
-                        <td class = black></td>
-                        <td class = white></td>
+
+                    <?php 
+                    for($j = 0; $j <= 3  ; $j++) {  
+                        if($i % 2 == 0) {
+                            echo "<td class = white></td>";
+                        } 
+                    ?>
+
+                    <td class = black></td>
+                    
+                    <?php 
+                        if($i % 2 == 1) {
+                            echo "<td class = white></td>";
+                    }
+                    
+                    } ?>
+
                     </tr>
-                </tbody>
-            </table>";
-            echo 
-            "<table>
-                <tbody>
-                    <tr>
-                        <td class = white></td>
-                        <td class = black></td>
-                        <td class = white></td>
-                        <td class = black></td>
-                        <td class = white></td>
-                        <td class = black></td>
-                        <td class = white></td>
-                        <td class = black></td>
-                    </tr>
-                </tbody>
-            </table>";  
-        }
-    ?>
+            <?php } ?>
+        </tbody>
+    </table>
 </body>
 </html>
